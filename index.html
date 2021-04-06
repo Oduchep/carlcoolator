@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans" />
+		<title>Carlcoolator</title>
+	</head>
+	<body>
+		<main>
+			<form class="container" name="calculate">
+				<h1>Carlcoolator</h1>
+				<section class="input-field-container">
+					<textarea name="txt" class="input-field" placeholder="0" onkeypress="javascript:return checkInput(event)"></textarea>
+				</section>
+				<section class="bttn-container">
+					<input type="button" value="C" class="bttn blue" onclick="document.calculate.txt.value = ''" />
+					<input type="button" value="+ / -" class="bttn blue" onclick="document.calculate.txt.value += '±'" />
+					<input type="button" value="%" class="bttn blue" onclick="document.calculate.txt.value += ' % '" />
+					<input type="button" value="/" class="bttn blue" onclick="document.calculate.txt.value += ' / '" />
+				</section>
+				<section class="bttn-container">
+					<input type="button" value="7" class="bttn" onclick="document.calculate.txt.value += '7'" />
+					<input type="button" value="8" class="bttn" onclick="document.calculate.txt.value += '8'" />
+					<input type="button" value="9" class="bttn" onclick="document.calculate.txt.value += '9'" />
+					<input type="button" value="x" class="bttn blue" onclick="document.calculate.txt.value += ' * '" />
+				</section>
+				<section class="bttn-container">
+					<input type="button" value="4" class="bttn" onclick="document.calculate.txt.value += '4'" />
+					<input type="button" value="5" class="bttn" onclick="document.calculate.txt.value += '5'" />
+					<input type="button" value="6" class="bttn" onclick="document.calculate.txt.value += '6'" />
+					<input type="button" value="-" class="bttn blue" onclick="document.calculate.txt.value += ' - '" />
+				</section>
+				<section class="bttn-container">
+					<input type="button" value="1" class="bttn" onclick="document.calculate.txt.value += '1'" />
+					<input type="button" value="2" class="bttn" onclick="document.calculate.txt.value += '2'" />
+					<input type="button" value="3" class="bttn" onclick="document.calculate.txt.value += '3'" />
+					<input type="button" value="+" class="bttn blue" onclick="document.calculate.txt.value += ' + '" />
+				</section>
+				<section class="bttn-container">
+					<input type="button" value="0" class="bttn" onclick="document.calculate.txt.value += '0'" />
+					<input type="button" value="." class="bttn" onclick="document.calculate.txt.value += '.'" />
+					<input type="button" value="Del" class="bttn red" onclick="document.calculate.txt.value = calculate.txt.value.slice(0, -1)" />
+					<input type="button" value="=" class="bttn blue" onclick="document.calculate.txt.value = eval(calculate.txt.value)" />
+				</section>
+			</form>
+		</main>
+
+		<script src="index.js"></script>
+	</body>
+</html>
