@@ -17,7 +17,7 @@
 				</section>
 				<section class="bttn-container">
 					<input type="button" value="C" class="bttn blue" onclick="document.calculate.txt.value = ''" />
-					<input type="button" value="+ / -" class="bttn blue" onclick="document.calculate.txt.value += '±'" />
+					<input type="button" value="Del" class="bttn red" onclick="document.calculate.txt.value = calculate.txt.value.slice(0, -1)" />
 					<input type="button" value="%" class="bttn blue" onclick="document.calculate.txt.value += ' % '" />
 					<input type="button" value="÷" class="bttn blue" onclick="document.calculate.txt.value += ' / '" />
 				</section>
@@ -42,7 +42,7 @@
 				<section class="bttn-container">
 					<input type="button" value="0" class="bttn" onclick="document.calculate.txt.value += '0'" />
 					<input type="button" value="." class="bttn" onclick="document.calculate.txt.value += '.'" />
-					<input type="button" value="Del" class="bttn red" onclick="document.calculate.txt.value = calculate.txt.value.slice(0, -1)" />
+					<input type="button" value="00" class="bttn" onclick="document.calculate.txt.value += '00'" />
 					<input type="button" value="=" class="bttn blue" onclick="document.calculate.txt.value = eval(calculate.txt.value)" />
 				</section>
 			</form>
